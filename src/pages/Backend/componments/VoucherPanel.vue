@@ -1,11 +1,9 @@
 <template>
   <a-drawer
     title="新增優惠卷"
-    :placement="placement"
     :closable="false"
     width="50%"
     :visible="visible"
-    @close="onClose"
   >
     <Form @submit="confirm" v-slot="{ errors }">
       <div
@@ -30,7 +28,6 @@
       <v-date-picker
         v-model="form.range"
         mode="dateTime"
-        :masks="masks"
         is-range
       >
         <template v-slot="{ inputValue, inputEvents, isDragging }">
@@ -93,7 +90,7 @@
 </template>
 
 <script lang="ts" setup>
-import { watch, reactive, ref, computed, defineEmits } from 'vue'
+import { watch, reactive, ref, computed, defineEmits, PropType } from 'vue'
 
 import { Coupon } from '@/api/interface'
 import { AddCoupon, EditCoupon } from '@/api/MercahntCoupon'
@@ -110,8 +107,8 @@ const props = defineProps({
       type: Object as () => any,
       require: true
     },
-    type: {
-      type: String,
+    selectdType: {
+      type: String as () => string,
       require: true
     }
 })
@@ -174,7 +171,7 @@ const confirm = () => {
     add: addCoupon
   }
   form.is_enabled = form.is_enabled ? 1 : 2
-  callFunction[props.type]()
+  callFunction[props.selectdType]()
 }
 const emit = defineEmits(['getData'])
 const editCoupon = () => {

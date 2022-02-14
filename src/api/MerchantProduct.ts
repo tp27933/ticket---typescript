@@ -42,7 +42,7 @@ export function EditPouduct (data: Product, path = user) {
   })
 }
 // 上傳圖片   /api/:api_path/admin/upload
-export function UploadImg (data: Event, path = user) {
+export function UploadImg (data: any, path = user) {
   return service.request({
     method: 'post',
     headers,

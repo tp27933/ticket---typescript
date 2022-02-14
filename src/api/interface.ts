@@ -6,7 +6,7 @@ export interface Product  {
   imageUrl: string,
   imagesUrl: Array<string>,
   is_enabled: number,
-  num: number,
+  num?: number,
   origin_price: number,
   price: number,
   title: string,
@@ -24,7 +24,8 @@ export interface Article {
   author: string,
   isPublic: boolean,
   content: string,
-  num: number
+  num: number,
+  [propName: string]: any
 }
 
 

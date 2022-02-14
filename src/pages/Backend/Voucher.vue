@@ -59,7 +59,7 @@
     ref="panel"
     :list="coupon"
     @getData="getData"
-    :type="coupon.selectType"
+    :selectdType="coupon.selectType"
   />
 </template>
 

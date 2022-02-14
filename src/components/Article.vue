@@ -45,7 +45,7 @@ const props = defineProps({
 
 const article = reactive({
   crrentIdx: 0,
-  currentArtilce: {},
+  currentArtilce: {} as Article,
   list: [] as Array<Article>
 })
 const { crrentIdx, currentArtilce, list } = toRefs(article)

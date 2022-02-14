@@ -4,7 +4,6 @@
     placement="right"
     v-model:visible="visible"
     width="80%"
-    :after-visible-change="afterVisibleChange"
   >
     <div class="editpopup bg-white">
       <main class="d-flex">
@@ -136,17 +135,16 @@
 import { watch, reactive, ref, defineEmits } from 'vue'
 
 import { AddPouduct, EditPouduct, UploadImg } from '@/api/MerchantProduct'
-
-const props = defineProps({
+const props = defineProps<{
   list: {
-    type: Object as () => any,
+    type: Object,
     require: true
   },
   type: {
     type: String,
     require: true
   }
-})
+}>()
 
 const visible = ref(false)
 const translate = reactive({

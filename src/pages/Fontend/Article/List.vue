@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, onMounted } from 'vue'
+import { reactive, onMounted, ref } from 'vue'
 
 import { dateFormmater } from '@/utils/Mixin'
 
@@ -49,11 +49,14 @@ import { Article } from '@/api/interface'
 import { GetArticiles } from '@/api/Article'
 
 const dataList : Array<Article>= reactive([])
+const loading = ref(false)
 onMounted(() => {
   getArticles()
 })
 const getArticles = () => {
+  loading.value = true
   GetArticiles().then(res => {
+    loading.value = false
     if (!res) return
     const { articles } = res.data
     dataList.push(...articles)

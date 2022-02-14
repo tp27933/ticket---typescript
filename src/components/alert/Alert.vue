@@ -12,9 +12,13 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  msg: Object
-})
+
+const props = defineProps<{
+  msg: {
+    show: boolean,
+    list: Array<string>
+  }
+}>()
 
 </script>
 

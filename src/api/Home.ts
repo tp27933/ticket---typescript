@@ -38,7 +38,7 @@ export function EditPouduct (data: Product, path = user): Promise<any> {
   })
 }
 // 上傳圖片   /api/:api_path/admin/upload
-export function UploadImg (data: Event, path = user): Promise<any> {
+export function UploadImg (data: any, path = user): Promise<any> {
   return service.request({
     method: 'post',
     headers,

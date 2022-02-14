@@ -2,26 +2,19 @@
 
 # **售票網站 - 千喜年售票**
 
-------
-
 > 響應式電子售票電商網站
 
-## 線上DEMO：https://umon752.github.io/60MoviePoster/#/
+## 線上DEMO：https://tp27933.github.io/ticket/
 
 ![image](https://github.com/tp27933/ticket---typescript/blob/master/src/assets/snapshot/%E5%8B%95%E7%95%AB.gif)
 
 ![image](https://github.com/tp27933/ticket---typescript/blob/master/src/assets/snapshot/home.jpg)
 
-------
-
 
 
 ## 使用技術:
 
-------
-
 - Vue3
-- Typescript
 - Vite
 - Vue Cli
 - Vue Component
@@ -31,7 +24,8 @@
 - V-Calendar
 - Ant Design of Vue
 - SCSS
-- mitt
+- Mitt
+- Gsap
 - Bootstrap 5
 - Font Awesome
 
@@ -39,9 +33,7 @@
 
 ## 開發功能: 
 
-------
-
-### **前台**
+### 前台
 
 - 首頁
 
@@ -92,8 +84,6 @@
 
 # 頁面展示
 
-------
-
 ### 登入畫面:
 
 ### 前台:
@@ -120,4 +110,4 @@
 
 ------
 
-更多細節請至 線上DEMO 查看
+更多細節請至 [線上DEMO](https://tp27933.github.io/ticket/) 查看

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
@@ -35,5 +36,4 @@
   ],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"],
-  
 }
